@@ -28,8 +28,8 @@ for i=1:length(Data),
 %     yy=(y-thresholdmin)/(thresholdmax-thresholdmin); %Switch Normalization
     yy=(y-thresholdmin) %Normalization off
     scatter(x,yy,[],C(i,:),'.');hold on
-    PosteriorHb(i)=max(yy(find(x>0.65)));
-    AnteriorHb(i)=max(yy(find(x<0.32)));
+%    PosteriorHb(i)=max(yy(find(x>0.65)));
+%    AnteriorHb(i)=max(yy(find(x<0.32)));
     yMinusHalf=yy(:)-0.5;
     yShift1=[0; yMinusHalf];yShift2=[yMinusHalf;0];
     yShiftMinus=yShift1.*yShift2;
